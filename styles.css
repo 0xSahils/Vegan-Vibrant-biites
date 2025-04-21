@@ -1,0 +1,1073 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(236, 225, 225);
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+  max-width: 100%;
+  overflow-x: hidden;
+  
+}
+
+/* General Styling for All <h2> Headings */
+h2 {
+  font-family: 'Montserrat', sans-serif; /* Modern, clean font */
+  font-size: 1.5rem; /* Adjust size to preference */
+   
+  text-transform: capitalize; /* Capitalize first letter of each word */
+  margin: 20px 0; /* Space above and below */
+  text-align: left; /* Align headings to the left */
+  padding-left: 15px; /* Spacing between border and text */
+}
+
+
+
+/* Header Styles */
+header {
+  background-color: #a13522;
+  color: rgb(182, 179, 179);
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  
+ }
+
+/* Header Top Layout */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-top .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Mode Toggle Styling */
+.mode-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.mode-toggle label {
+  font-size: 1rem;
+  color: rgb(255, 251, 0);
+  margin-right: 8px;
+}
+
+#toggle-dark-mode {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background: #fcdfa4c4;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#toggle-dark-mode:checked {
+  background: #00000080;
+}
+
+#toggle-dark-mode::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: 0.3s;
+}
+
+#toggle-dark-mode:checked::after {
+  left: 21px;
+}
+
+/* Search Bar and About Us Layout */
+.header-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#search-bar {
+  padding: 10px;
+  font-size: 1rem;
+  width: 70%;
+  border: 2px solid rgb(206, 94, 105);
+  border-radius: 25px;
+  outline: none;
+}
+
+#search-bar:focus {
+  border-color: #9a4b78d0;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: rgb(241, 67, 67);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #d07280;
+  transform: scale(1.05);
+}
+
+/* About Us Link Styling */
+.about-link {
+  color: rgb(228, 222, 222);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 2px solid rgb(177, 74, 74);
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.about-link:hover {
+  background-color: white;
+  color: #ff0000;
+}
+
+/* Recipe Container Layout */
+.recipe-container {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .recipe-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .recipe-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Recipe Box Styles */
+.recipe-box {
+  border: 1px solid #918888;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #f7dfc9;
+}
+
+.recipe-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.recipe-box h3 {
+  font-size: 1.2rem;
+  color: #392e2e;
+  margin-top: 10px;
+}
+
+.recipe-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Advertisement Styling */
+/* Container for the sticky ad */
+/* Full-width bottom fixed ad container */
+/* Ad container styling */
+/* Sticky Ad Container */
+.ad-container {
+  
+  bottom: 0; /* Fixes the ad to the bottom of the viewport */
+  left: 0; /* Ensures the ad spans from left to right */
+  width: 100%; /* Full-width */
+  padding: 10px 0;
+  background-color: #f4f4f4; /* Light background */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for visibility */
+  z-index: 1000; /* Keeps it on top of other content */
+  text-align: center;
+}
+
+/* Ad content styling */
+.adsbygoogle {
+  max-width: 100%; /* Restricts the ad width within the container */
+  width: 100%; /* Makes sure the ad spans the full container */
+  height: auto;
+  display: inline-block;
+}
+
+/* Optional: Ad Close Button */
+.ad-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ad-close-btn:hover {
+  background-color: #555;
+}
+
+
+
+/* Adjust padding for mobile screens */
+@media (max-width: 480px) {
+  .ad-container {
+    padding: 10px 0;
+  }
+}
+
+
+/* Pagination */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+
+.pagination-controls button {
+  padding: 12px 14px;
+  background-color: #9c561d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination-controls button:hover {
+  background-color: rgb(131, 64, 18);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #292828;
+  color: #f1f1f1;
+}
+
+.dark-mode header{
+  background-color: #723f3f;
+}
+
+.recipe-box.dark-mode {
+  background-color: #555;
+  color: #f1f1f1;
+  border-color: #666;
+}
+
+.ad-section.dark-mode {
+  background-color: #555;
+  color: #ddd;
+  border-color: #666;
+}
+
+
+.dark-mode button{
+  background-color: #d07280;
+  transform: scale(1.05);
+}
+
+.dark-mode button:hover {
+  background-color: #d89064d8;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Recipe Container Layout */
+.recipe-container {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  width: 100%; /* Full width */
+}
+
+/* Adjust for larger screens */
+@media (min-width: 1024px) {
+  .recipe-container {
+    grid-template-columns: repeat(4, 1fr); /* Increase to 4 per row */
+  }
+}
+
+/* Adjust for medium screens */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .recipe-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  }
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 767px) {
+  .recipe-container {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+}
+
+
+header, .main-content, .ad-container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #9f7e52;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+
+
+
+/* Remove default blue color and underline for all links */
+a {
+  color: rgba(255, 0, 0, 0.457); /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Optional: Styling for links when hovered */
+a:hover {
+  color: #559CAD; /* Change the color when the user hovers over a link */
+  text-decoration: underline; /* Optional: Add an underline on hover */
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #ede3e3;
+}
+
+/* Responsive Footer Adjustments */
+@media (max-width: 768px) {
+  footer {
+      padding: 15px;
+  }
+  .footer-links {
+      gap: 15px;
+  }
+  footer p {
+      font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+
+/* About Us Section */
+
+/* Hover Effect for Headings */
+h2:hover {
+  color: #559CAD; /* Changes color on hover for a subtle interactive effect */
+  transition: color 0.3s ease-in;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-section h2,
+  .team-section h2 {
+      font-size: 1.6em;
+  }
+
+  .our-values h3,
+  .team-section h3 {
+      font-size: 1.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section h2,
+  .team-section h2 {
+      font-size: 1.4em;
+  }
+
+  .our-values h3,
+  .team-section h3 {
+      font-size: 1.2em;
+  }
+}
+body.dark-mode section p {
+color: #e0e0e0; /* Lighter shade to improve readability */
+}
+
+
+/* Join Community Section */
+.join {
+background-color: #eacbc1; /* Soft background for light mode */
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin: 30px 0;
+text-align: center;
+transition: background-color 0.3s, color 0.3s;
+}
+
+.join h3 {
+font-size: 1.8em;
+color: #a81818;
+margin-bottom: 15px;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: color 0.3s;
+}
+
+.join p {
+font-size: 1em;
+color: #333;
+line-height: 1.6;
+max-width: 600px;
+margin: 0 auto;
+transition: color 0.3s;
+}
+/* Dark Mode Styles for Join Section */
+body.dark-mode .join {
+background-color: #333945; /* Darker background for dark mode */
+color: #e0e0e0;
+}
+
+body.dark-mode .join h3 {
+color: #c28d32;
+}
+
+body.dark-mode .join p {
+color: #e0e0e0;
+}
+
+/* Our Mission Section */
+.team-section {
+background-color: #f6efe6; /* Soft background for light mode */
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin: 30px 0;
+text-align: center;
+transition: background-color 0.3s, color 0.3s;
+}
+
+.team-section h2 {
+font-size: 1.8em;
+color: #995a4a;
+margin-bottom: 15px;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: color 0.3s;
+}
+
+.team-section p {
+font-size: 1em;
+color: #000000;
+line-height: 1.6;
+max-width: 600px;
+margin: 0 auto 20px;
+transition: color 0.3s;
+}
+
+/* Our Values Section within Team Section */
+.team-section .our-values {
+background-color: #c8daed; /* Slightly different shade to set it apart */
+padding: 20px;
+border-radius: 8px;
+margin-top: 20px;
+}
+
+.team-section .our-values h3 {
+font-size: 1.5em;
+color: #99564a;
+margin-bottom: 15px;
+}
+
+.team-section .our-values ul {
+list-style-type: none;
+padding: 0;
+color: #000000;
+font-size: 1em;
+line-height: 1.6;
+}
+
+.team-section .our-values li {
+margin-bottom: 10px;
+}
+
+.team-section .our-values li strong {
+color: #44a0b7;
+}
+
+/* Dark Mode Styles for Team Section */
+body.dark-mode .team-section {
+background-color: #333945;
+color: #e0e0e0;
+}
+
+body.dark-mode .team-section h2,
+body.dark-mode .team-section .our-values h3 {
+color: #ce7980;
+}
+
+body.dark-mode .team-section p,
+body.dark-mode .team-section .our-values ul,
+body.dark-mode .team-section .our-values li {
+color: #ffffff;
+}
+
+body.dark-mode .team-section .our-values {
+background-color: #272a30;
+}
+
+/* About Section */
+.about-section {
+background-color: #f3e1e1; /* Light background for readability */
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin: 30px 0;
+text-align: center;
+transition: background-color 0.3s, color 0.3s;
+}
+
+.about-section h2 {
+font-size: 1.8em;
+color: #981616;
+margin-bottom: 15px;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: color 0.3s;
+}
+
+.about-section p {
+font-size: 1em;
+color: #333;
+line-height: 1.6;
+max-width: 600px;
+margin: 0 auto;
+transition: color 0.3s;
+}
+
+/* Dark Mode Styles for About Section */
+body.dark-mode .about-section {
+background-color: #3d4453; /* Dark background for dark mode */
+color: #e0e0e0;
+}
+
+body.dark-mode .about-section h2 {
+color: #d87667e8;
+}
+
+body.dark-mode .about-section p {
+color: #e0e0e0;
+}
+
+
+
+
+
+/* Recipie decoration */
+/* Recipe Page Title Styling */
+.recipe-page h1 {
+  padding-top: 20px;
+  color: #e36014;
+  font-size: 2em;
+  border-bottom: 2px solid #2d6f81;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Image Container and Image Styling */
+/* Ensure the recipe image is displayed correctly within the container */
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+  width: 100%; /* Ensure it takes the full width of its parent */
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden; /* Prevent any overflow of image outside its container */
+}
+
+.recipe-img {
+  width: 100%; /* Make the image scale with the container's width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container properly */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+}
+
+
+/* Recipe Description Styling */
+.recipe-description {
+  font-size: 1.1em;
+  color: #1e2224;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f5f0f0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.8; /* Increased line height for more space between lines of text */
+}
+
+
+/* Ad Container Styling */
+.ad-container {
+  background: #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1em;
+  color: #6c757d;
+}
+
+/* General Styling for Lists (Ingredients, Instructions, Nutrition) */
+.ingredients-list, .instructions-list, .nutrition-list {
+  background: #f5efef;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Adding space between each ingredient in the list */
+.ingredients-list li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Adding space between each instruction and nutrition item */
+.instructions-list li, .nutrition-list li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .recipe-page h1 {
+    font-size: 1.8em; /* Slightly smaller title on medium screens */
+  }
+
+  .ingredients-list, .instructions-list, .nutrition-list {
+    padding: 10px; /* Reduced padding for smaller screens */
+  }
+
+  .ingredients-list li, .instructions-list li, .nutrition-list li {
+    font-size: 1em; /* Smaller font for ingredients, instructions, and nutrition */
+    margin: 8px 0; /* Reduced margin for better spacing */
+  }
+
+  .recipe-description {
+    font-size: 1em; /* Smaller text for recipe description */
+    padding: 8px; /* Reduced padding */
+  }
+
+  .ad-container {
+    font-size: 0.9em; /* Smaller font for ads */
+    padding: 12px; /* Less padding for ads */
+  }
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 480px) {
+  .recipe-page h1 {
+    font-size: 1.5em; /* Even smaller title for mobile screens */
+  }
+
+  .ingredients-list, .instructions-list, .nutrition-list {
+    padding: 8px; /* Even less padding on mobile */
+  }
+
+  .ingredients-list li, .instructions-list li, .nutrition-list li {
+    font-size: 0.95em; /* Even smaller font on mobile */
+    margin: 6px 0; /* Reduced margin for smaller screens */
+  }
+
+  .recipe-description {
+    font-size: 0.95em; /* Smaller text for recipe description */
+    padding: 6px; /* Less padding on mobile */
+  }
+
+  .ad-container {
+    font-size: 0.8em; /* Smaller font for ads on mobile */
+    padding: 10px; /* Less padding for ads on mobile */
+  }
+}
+
+
+/* Slider Styles */
+.recommendations-slider {
+  margin-top: 40px;
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 40px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.recommendations-slider h3 {
+  font-size: 2em;
+  color: #581e1e;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+
+/* Hide all slides initially */
+.slider-container .slide {
+  display: none;
+}
+
+/* Show the active slide */
+.slider-container .slide:first-child {
+  display: block;
+}
+
+/* Slider container styling */
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Can adjust for different screen sizes */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Flexbox layout for the slides */
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Each slide's styling */
+.slide {
+  flex: 0 0 100%;
+  text-align: center;
+  position: relative;
+}
+
+/* Image container for the slides */
+.slide-image {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* Aspect ratio for the image */
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #eee;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Style for the images */
+.slide-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Overlay text box */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+}
+
+/* Hover effect to zoom in the image */
+.slide:hover .slide-image img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Navigation buttons styling */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background-color: rgba(183, 128, 58, 0.7);
+  color: #fff;
+  font-size: 3em;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+/* Hover effect for buttons */
+.slider-btn:hover {
+  background-color: #a37257;
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 90%;
+  }
+
+  .slide-image {
+    padding-top: 90%;
+  }
+
+  .overlay p {
+    font-size: 1em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  background-color: #fff; /* Light mode background */
+  color: #0f1112; /* Default text color */
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color for dark mode */
+}
+
+body.dark-mode .recipe-page h1 {
+  color: #e88f36; /* Dark mode heading color */
+  border-bottom: 2px solid #2f4b4d;
+}
+
+body.dark-mode .recipe-description {
+  background: #0e1419;
+  color: #ecf0f1;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .ad-container {
+  background: #34495e;
+  color: #ecf0f1;
+}
+
+body.dark-mode .ingredients-list,
+body.dark-mode .instructions-list,
+body.dark-mode .nutrition-list {
+  background: #17131f;
+  color: #ecf0f1;
+}
+
+body.dark-mode .ingredients-list li,
+body.dark-mode .instructions-list li,
+body.dark-mode .nutrition-list li {
+  color: #ecf0f1;
+}
+
+
+
+
+
+
+
+
+
+
+/* General Ad Container Styling */
+.ad-banner, .ad-in-content, .ad-footer {
+  width: 100%;  /* Ensures the ad spans full width */
+  margin: 20px 0;  /* Adds spacing around the ad */
+  padding: 10px 0; /* Padding for a cleaner look */
+  text-align: center;  /* Centers the ad */
+}
+
+/* For SEO and UX, this ensures proper spacing around the content */
+.recipe-page {
+  padding-bottom: 60px;  /* Prevents content from being hidden by ads */
+}
+
+/* Ad Styling for the Top Banner */
+.ad-banner {
+  background-color: #f9f9f9;  /* Soft background for contrast */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+}
+
+.adsbygoogle {
+  width: 100%;
+  height: auto;
+  display: inline-block;  /* Ensures it stays inline for responsive layout */
+}
+
+/* Ad Styling for In-Content Ads */
+.ad-in-content {
+  background-color: #f4f4f4;  /* Slightly lighter background for distinction */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ad Styling for Footer */
+.ad-footer {
+  background-color: #f9f9f9;  /* Matches the top banner */
+  padding: 10px 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow at the bottom */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .ad-banner, .ad-in-content, .ad-footer {
+    margin: 10px 0;  /* Reduced margin for smaller screens */
+    padding: 8px 0;  /* Reduced padding for mobile optimization */
+  }
+}
+
+/* Ensuring the ads fit well with UX on mobile */
+@media (max-width: 480px) {
+  .ad-banner, .ad-in-content, .ad-footer {
+    padding: 5px 0;  /* Further reduce padding on very small screens */
+  }
+
+  .adsbygoogle {
+    width: 100%;  /* Ensure the ad fills the screen width on small devices */
+  }
+}
+
+/* Optional: Add a Close Button for Ads (if applicable) */
+.ad-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ad-close-btn:hover {
+  background-color: #555;
+}
+
+
+
+
+
+
+
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><strong>Roasted Tofu:</strong> <a href="Roasted_Tofu"> How to make roasted Tofu </a></li>
+<a href="vegan_broth_recipe.html">(Learn how to make vegan broth here).</a>
