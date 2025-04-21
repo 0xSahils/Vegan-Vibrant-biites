@@ -42,12 +42,15 @@ header {
 /* Header Top Layout */
 .header-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .header-top .logo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -55,7 +58,7 @@ header {
 /* Mode Toggle Styling */
 .mode-toggle {
   display: flex;
-  align-items: center;
+  align-items: end;
 }
 
 .mode-toggle label {
