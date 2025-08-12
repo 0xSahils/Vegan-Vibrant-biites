@@ -3,59 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Discover delicious vegan recipes at Vibrant Vegan Bites. Easy, healthy, and flavorful plant-based meals for every occasion!">
-  <meta name="keywords" content="Vegan recipes, plant-based food, healthy cooking, dairy-free meals, vegan breakfast, vegan lunch, vegan dinner">
+  <meta name="description" content="Discover 100+ delicious vegan recipes at Vibrant Vegan Bites. Easy, healthy, and flavorful plant-based meals for breakfast, lunch, dinner, and desserts. Start your vegan journey today!">
+  <meta name="keywords" content="vegan recipes, plant-based food, healthy cooking, dairy-free meals, vegan breakfast, vegan lunch, vegan dinner, vegan desserts, vegetarian recipes, cruelty-free cooking, sustainable food">
   <meta name="author" content="Vibrant Vegan Bites">
   <meta name="robots" content="index, follow">
-  
-  <title>Vibrant Vegan Bites - Recipes</title>
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <link rel="canonical" href="https://vibrantveganbiteswebsite.com/">
+
+  <!-- Open Graph Meta Tags (for social sharing) -->
+  <meta property="og:title" content="Vibrant Vegan Bites - 100+ Delicious Plant-Based Recipes">
+  <meta property="og:description" content="Discover amazing vegan recipes that are easy to make, healthy, and incredibly delicious. From quick breakfast ideas to gourmet dinners - find your next favorite meal!">
+  <meta property="og:image" content="https://vibrantveganbiteswebsite.com/images/logo.png">
+  <meta property="og:url" content="https://vibrantveganbiteswebsite.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vibrant Vegan Bites">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vibrant Vegan Bites - 100+ Delicious Plant-Based Recipes">
+  <meta name="twitter:description" content="Discover amazing vegan recipes that are easy to make, healthy, and incredibly delicious. Start your plant-based journey today!">
+  <meta name="twitter:image" content="https://vibrantveganbiteswebsite.com/images/logo.png">
+  <meta name="twitter:site" content="@VibrantVeganBites">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Vibrant Vegan Bites",
+    "description": "Discover 100+ delicious vegan recipes for every meal and occasion",
+    "url": "https://vibrantveganbiteswebsite.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://vibrantveganbiteswebsite.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <title>Vibrant Vegan Bites - 100+ Delicious Plant-Based Recipes | Healthy Vegan Cooking</title>
   <link rel="stylesheet" href="styless.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="theme-color" content="#e74c3c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vibrant Vegan Bites">
 </head>
 <body>
 
   <!-- Header Section -->
   <header>
     <div class="header-top">
-      <div class="logo"> 
-        <img src="images/logo.png">Vibrant Vegan Bites
-        
+      <div class="logo">
+        <img src="images/logo.png" alt="Vibrant Vegan Bites Logo - Plant-based recipes">
+        <span>Vibrant Vegan Bites</span>
       </div>
       <div class="mode-toggle">
-        <label for="toggle-dark-mode"></label>
-        <input type="checkbox" id="toggle-dark-mode">
+        <label for="toggle-dark-mode">🌙</label>
+        <input type="checkbox" id="toggle-dark-mode" aria-label="Toggle dark mode">
       </div>
     </div>
     <div class="header-bottom">
+      <input type="search" id="search-bar" placeholder="Search recipes..." aria-label="Search recipes">
+      <button onclick="searchRecipes()" aria-label="Search">🔍</button>
       <a href="about.html" class="about-link">About Us</a>
+      <a href="contact.html" class="about-link">Contact</a>
     </div>
   </header>
 
-<!-- Advertisement Section (Top) -->
-<div class="ad-container">
-  <!-- Replace this code with your own AdSense ad code -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-XXXXXX"   Your Publisher ID
-       data-ad-slot="XXXXXX"           Your Ad Slot ID
-       data-ad-format="auto"></ins>
-  <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-  </script> -->
-</div>
+  <!-- Advertisement Section (Top) -->
+  <div class="ad-container">
+    <!-- Replace this code with your own AdSense ad code -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXX"
+         data-ad-slot="XXXXXX"
+         data-ad-format="auto"></ins>
+    <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+    </script> -->
+  </div>
 
   <!-- Main Section -->
   <main>
-  
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Welcome to Vibrant Vegan Bites</h1>
+        <p>Discover over 100 delicious, healthy, and easy-to-make plant-based recipes that will transform your kitchen into a vibrant culinary adventure. From quick breakfast ideas to gourmet dinners, we've got something for every taste and occasion.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Recipes</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">15min</span>
+            <span class="stat-label">Average Prep</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Plant-Based</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Featured Categories -->
+    <section class="categories-section">
+      <h2>Browse by Category</h2>
+      <div class="categories-grid">
+        <div class="category-card" onclick="filterRecipes('breakfast')">
+          <span class="category-icon">🥞</span>
+          <h3>Breakfast</h3>
+          <p>Start your day right</p>
+        </div>
+        <div class="category-card" onclick="filterRecipes('lunch')">
+          <span class="category-icon">🥗</span>
+          <h3>Lunch</h3>
+          <p>Midday fuel</p>
+        </div>
+        <div class="category-card" onclick="filterRecipes('dinner')">
+          <span class="category-icon">🍝</span>
+          <h3>Dinner</h3>
+          <p>Evening delights</p>
+        </div>
+        <div class="category-card" onclick="filterRecipes('dessert')">
+          <span class="category-icon">🍰</span>
+          <h3>Desserts</h3>
+          <p>Sweet treats</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Recipes Grid Section -->
-    <section class="recipe-container">
-      <!-- Recipe boxes will be populated by JavaScript -->
+    <section class="recipes-section">
+      <h2>All Recipes</h2>
+      <div class="recipe-container">
+        <!-- Recipe boxes will be populated by JavaScript -->
+      </div>
     </section>
+
     <!-- Advertisement Section (Bottom) -->
-    
     <div class="ad-footer">
       <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <ins class="adsbygoogle"
@@ -67,11 +161,7 @@
       <script>
           (adsbygoogle = window.adsbygoogle || []).push({});
       </script> -->
-  </div>
-
-
-  
-    
+    </div>
 
     <!-- Pagination Controls -->
     <div class="pagination-controls">
@@ -79,16 +169,37 @@
       <span id="page-info"></span>
       <button onclick="changePage(1)">Next</button>
     </div>
-
-    
-
   </main>
 
   <!-- Footer Section -->
   <footer>
-    <p>&copy; 2024 Vibrant Vegan Bites. All rights reserved.</p>
-    <a href="https://in.pinterest.com/VeganBitesVibrant/" target="_blank">Pinterest</a>
-</footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Vibrant Vegan Bites</h3>
+        <p>Your go-to destination for delicious, healthy, and sustainable plant-based recipes.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://in.pinterest.com/VeganBitesVibrant/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Pinterest">📌 Pinterest</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">📷 Instagram</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">📘 Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Vibrant Vegan Bites. All rights reserved. | Made with 💚 for a sustainable future</p>
+    </div>
+  </footer>
 
   <!-- JavaScript -->
   <script src="scriptss.js"></script>

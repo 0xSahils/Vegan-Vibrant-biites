@@ -1,0 +1,13 @@
+# ads.txt file for Vibrant Vegan Bites
+# This file will be updated with actual AdSense publisher ID once approved
+
+# Google AdSense
+# google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Instructions for updating this file:
+# 1. Replace "pub-XXXXXXXXXXXXXXXXX" with your actual AdSense publisher ID
+# 2. Remove the # symbol from the beginning of the Google AdSense line
+# 3. Upload this file to the root directory of your website
+
+# Example format:
+# google.com, pub-1234567890123456, DIRECT, f08c47fec0942fa0

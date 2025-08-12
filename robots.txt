@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vibrantveganbiteswebsite.com/sitemap.xml
+
+# Disallow crawling of admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow crawling of all content for better indexing
+Allow: /images/
+Allow: /recipes/
+Allow: *.css
+Allow: *.js
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
